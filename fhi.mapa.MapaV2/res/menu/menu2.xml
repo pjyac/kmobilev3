@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/item2" android:title="@string/menu1" android:menuCategory="system"></item>
+    <item android:id="@+id/item3" android:title="@string/menu2" android:menuCategory="system"></item>
+    <item android:id="@+id/item4" android:title="@string/menu3" android:menuCategory="system"></item>
+    
+    
+
+</menu>

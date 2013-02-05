@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/about1"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btncountry"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="155dp"
+            android:textSize="14dp"
+            android:textColor="#F2F2F2"
+            android:background="@drawable/boton"
+            android:text="Select Country" />
+ <TextView
+        android:id="@+id/textView1"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="21dp"
+        android:layout_below="@+id/btncountry"
+        android:layout_marginTop="75dp"
+        android:textSize="14dp"
+        android:text="@string/about"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#141414" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignRight="@+id/textView1"
+        android:textSize="14dp"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="15dp"
+        android:textColor="#141414"
+        android:text="@string/about2"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="15dp"
+        android:textSize="14dp"
+         android:textColor="#141414"
+        android:text="@string/about3"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+    </RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kmobile Schools V. 1.8</string>
+    <string name="menu">Configuration</string>
+    <string name="menu1">Country</string>
+    <string name="menu2">Camp</string>
+    <string name="menu3">School</string>
+    <string name="about">Kmobile Schools is an app oriented
+to Android devices that allows the
+users to query school data
+captured with the ODK Collect app.
+</string>
+<string name="about2">Select a country and view the 
+schools over Google Earth, zoom,
+pan and select the school, visualizing
+its identification, key performance
+indicator, enrollment, textbooks 
+and graduates.
+</string>
+<string name="about3">You can also see up to three school
+photos.
+</string>
+</resources>

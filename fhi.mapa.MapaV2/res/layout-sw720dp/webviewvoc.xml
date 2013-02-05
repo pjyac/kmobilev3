@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <WebView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/BtnMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.32"
+            android:background="@drawable/boton"
+            android:text="Map" />
+
+        <Button
+            android:id="@+id/BtnRep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.32"
+            android:background="@drawable/boton"
+            android:text="Report" />
+
+        <Button
+            android:id="@+id/BtnPho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.32"
+            android:background="@drawable/boton"
+            android:text="Photo" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/k_mobile" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageButton1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/Btnident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.32"
+            android:background="@drawable/boton"
+            android:text="ID" />
+
+        <Button
+            android:id="@+id/BtnP_P"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.32"
+            android:background="@drawable/boton"
+            android:text="PRE" />
+
+        <Button
+            android:id="@+id/BtnPrim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.32"
+            android:background="@drawable/boton"
+            android:text="PRI" />
+
+        <Button
+            android:id="@+id/BtnSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.32"
+            android:background="@drawable/boton"
+            android:text="SEC" />
+
+        <Button
+            android:id="@+id/BtnTer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.32"
+            android:background="@drawable/boton"
+            android:text="TER" />
+
+        <Button
+            android:id="@+id/BtnAlp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.32"
+            android:background="@drawable/boton"
+            android:text="ALP" />
+    </LinearLayout>
+
+</RelativeLayout>
