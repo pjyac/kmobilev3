@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="about" parent="android:Theme.Dialog"> 
+        <item name="android:windowBackground">@drawable/panelgris</item>
+        <item name="android:colorForeground">#E9292C</item> 
+        <item name= "android:textColor">#E9292C</item>
+     </style> 
+</resources>

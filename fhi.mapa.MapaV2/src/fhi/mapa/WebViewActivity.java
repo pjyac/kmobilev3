@@ -109,6 +109,7 @@ public class WebViewActivity extends Activity {
 				String codigo = MyOverlay.codigo();
 			    Intent intent = new Intent(context, PrimViewActivity.class);
 			    intent.putExtra("codigo", codigo);
+			    intent.putExtra("niv", nivel);
 			    startActivity(intent);
 			  }
 	 
@@ -121,6 +122,7 @@ public class WebViewActivity extends Activity {
 				String codigo = MyOverlay.codigo();
 			    Intent intent = new Intent(context, SecViewActivity.class);
 			    intent.putExtra("codigo", codigo);
+			    intent.putExtra("niv", nivel);
 			    startActivity(intent);
 			  }
 	 
@@ -133,6 +135,7 @@ public class WebViewActivity extends Activity {
 				String codigo = MyOverlay.codigo();
 			    Intent intent = new Intent(context, VocViewActivity.class);
 			    intent.putExtra("codigo", codigo);
+			    intent.putExtra("niv", nivel);
 			    startActivity(intent);
 			  }
 	 
@@ -145,6 +148,7 @@ public class WebViewActivity extends Activity {
 				String codigo = MyOverlay.codigo();
 			    Intent intent = new Intent(context, TertViewActivity.class);
 			    intent.putExtra("codigo", codigo);
+			    intent.putExtra("niv", nivel);
 			    startActivity(intent);
 			  }
 	 
@@ -157,6 +161,7 @@ public class WebViewActivity extends Activity {
 				String codigo = MyOverlay.codigo();
 			    Intent intent = new Intent(context, ALPViewActivity.class);
 			    intent.putExtra("codigo", codigo);
+			    intent.putExtra("niv", nivel);
 			    startActivity(intent);
 			  }
 	 

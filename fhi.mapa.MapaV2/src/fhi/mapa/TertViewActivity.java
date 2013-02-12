@@ -6,6 +6,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
@@ -21,6 +24,7 @@ public class TertViewActivity extends Activity {
 	private Button btnVoc = null;
 	private Button btnTert = null;
 	private Button btnALP = null;
+	public String nivel;
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.webviewter);
@@ -39,9 +43,10 @@ public class TertViewActivity extends Activity {
 		 Bundle bundle=getIntent().getExtras();
 		 
 		//webView.loadUrl("http://www.fhi360guatemala.org/android/php_couchdb.php?cod="+bundle.getString("codigo"));
-		webView.loadUrl("http://www.fhi360guatemala.org/android/kenya_ter.php?cod="+bundle.getString("codigo")+"&db="+database);
+		webView.loadUrl("http://www.fhi360guatemala.org/android/kenya_terV2.php?cod="+bundle.getString("codigo")+"&db="+database+"&nivel="+bundle.getString("niv"));
 		//Boton Map
 		final Context context = this;
+		nivel = bundle.getString("niv"); 
 		//final Activity activity = this;
 		/*webView.setWebChromeClient(new WebChromeClient() {
 			   public void onProgressChanged(WebView view, int progress) {
@@ -87,6 +92,7 @@ public class TertViewActivity extends Activity {
 				String codigo = MyOverlay.codigo();
 			    Intent intent = new Intent(context, P_PViewActivity.class);
 			    intent.putExtra("codigo", codigo);
+			    intent.putExtra("niv", nivel);
 			    startActivity(intent);
 			  }
 	 
@@ -99,6 +105,7 @@ public class TertViewActivity extends Activity {
 				String codigo = MyOverlay.codigo();
 			    Intent intent = new Intent(context, PrimViewActivity.class);
 			    intent.putExtra("codigo", codigo);
+			    intent.putExtra("niv", nivel);
 			    startActivity(intent);
 			  }
 	 
@@ -111,6 +118,7 @@ public class TertViewActivity extends Activity {
 				String codigo = MyOverlay.codigo();
 			    Intent intent = new Intent(context, SecViewActivity.class);
 			    intent.putExtra("codigo", codigo);
+			    intent.putExtra("niv", nivel);
 			    startActivity(intent);
 			  }
 	 
@@ -123,6 +131,7 @@ public class TertViewActivity extends Activity {
 				String codigo = MyOverlay.codigo();
 			    Intent intent = new Intent(context, VocViewActivity.class);
 			    intent.putExtra("codigo", codigo);
+			    intent.putExtra("niv", nivel);
 			    startActivity(intent);
 			  }
 	 
@@ -135,6 +144,7 @@ public class TertViewActivity extends Activity {
 				String codigo = MyOverlay.codigo();
 			    Intent intent = new Intent(context, WebViewActivity.class);
 			    intent.putExtra("codigo", codigo);
+			    intent.putExtra("niv", nivel);
 			    startActivity(intent);
 			  }
 	 
@@ -147,12 +157,49 @@ public class TertViewActivity extends Activity {
 				String codigo = MyOverlay.codigo();
 			    Intent intent = new Intent(context, ALPViewActivity.class);
 			    intent.putExtra("codigo", codigo);
+			    intent.putExtra("niv", nivel);
 			    startActivity(intent);
 			  }
 	 
 			});
 		
 	}
+	 @Override
+	    public boolean onCreateOptionsMenu(Menu menu) 
+	    {
+	    	 MenuInflater inflater = getMenuInflater();
+	         inflater.inflate(R.menu.menu2, menu);
+	        return true;
+	    }
+	    @Override
+	    public boolean onOptionsItemSelected(MenuItem item) {
+	 	   switch (item.getItemId()) {
+	 	        case R.id.item2:
+	 	        	finish();
+	 	        	
+	 	           Intent intent = new Intent(getApplicationContext(), TertViewActivity.class);
+	 	           intent.putExtra("niv", "1");
+				    startActivity(intent);
+	 	           return true;
+	 	        case R.id.item3:
+	 	        	finish();
+	 	        	
+	 	           Intent intent2 = new Intent(getApplicationContext(), TertViewActivity.class);
+	 	           intent2.putExtra("niv", "2");
+				    startActivity(intent2);
+	 	           return true;
+	 	       case R.id.item4:
+		        	finish();
+		        	
+		           Intent intent3 = new Intent(getApplicationContext(), TertViewActivity.class);
+		           String codigo = MyOverlay.codigo();
+		           intent3.putExtra("codigo", codigo);
+				    startActivity(intent3);
+		           return true;
+	 	        default:
+	 	           return super.onOptionsItemSelected(item);
+	 	    }
+	 	}
 	@Override
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
